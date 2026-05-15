@@ -1,0 +1,126 @@
+/**
+ * HomeApp Guide - Global Styles
+ * Paleta: primaryBlue #6B79D1 | lightBlue #6BACD1 | teal #6BD1C3 | warning #F4B942
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+/* ── Tokens ──────────────────────────────────────────────────── */
+:root {
+  /* Infima overrides */
+  --ifm-color-primary: #6b79d1;
+  --ifm-color-primary-dark: #5868c8;
+  --ifm-color-primary-darker: #4e5fc4;
+  --ifm-color-primary-darkest: #3a4db2;
+  --ifm-color-primary-light: #7e8bd6;
+  --ifm-color-primary-lighter: #8793d9;
+  --ifm-color-primary-lightest: #a3ace2;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Inter', system-ui, sans-serif;
+  --ifm-heading-font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --ifm-navbar-height: 64px;
+  --docusaurus-highlighted-code-line-bg: rgba(107, 121, 209, 0.12);
+
+  /* HomeApp palette */
+  --ha-blue: #6B79D1;
+  --ha-light-blue: #6BACD1;
+  --ha-teal: #6BD1C3;
+  --ha-warning: #F4B942;
+
+  /* Gradient */
+  --ha-gradient: linear-gradient(135deg, #6B79D1 0%, #6BACD1 50%, #6BD1C3 100%);
+  --ha-gradient-soft: linear-gradient(135deg, rgba(107,121,209,0.08) 0%, rgba(107,172,209,0.08) 100%);
+
+  /* Shadows */
+  --ha-shadow-sm: 0 2px 8px rgba(107,121,209,0.15);
+  --ha-shadow-md: 0 8px 32px rgba(107,121,209,0.2);
+  --ha-shadow-lg: 0 16px 48px rgba(107,121,209,0.25);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #6bd1c3;
+  --ifm-color-primary-dark: #51c5b5;
+  --ifm-color-primary-darker: #44c0b0;
+  --ifm-color-primary-darkest: #2eb0a0;
+  --ifm-color-primary-light: #85d8cc;
+  --ifm-color-primary-lighter: #92dcd1;
+  --ifm-color-primary-lightest: #b8e7df;
+  --ifm-background-color: #0f1117;
+  --ifm-background-surface-color: #1a1d2e;
+  --docusaurus-highlighted-code-line-bg: rgba(107,209,195,0.12);
+
+  --ha-gradient-soft: linear-gradient(135deg, rgba(107,121,209,0.15) 0%, rgba(107,172,209,0.10) 100%);
+  --ha-shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+  --ha-shadow-md: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+/* ── Typography ───────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--ifm-heading-font-family);
+  letter-spacing: -0.02em;
+}
+
+/* ── Navbar ─────────────────────────────────────────────────── */
+/* IMPORTANTE: No usar backdrop-filter aquí porque crea un stacking context
+   que atrapa el sidebar móvil y rompe el menú hamburguesa */
+.navbar {
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid rgba(107, 121, 209, 0.15);
+  box-shadow: 0 1px 12px rgba(107, 121, 209, 0.08);
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(15, 17, 23, 0.98);
+  border-bottom-color: rgba(107, 209, 195, 0.12);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Mobile Navbar Sidebar (hamburger menu) ─────────────────── */
+.navbar-sidebar__items .navbar__item {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.15s ease;
+}
+
+.navbar-sidebar__items .navbar__item:hover {
+  background: rgba(107, 121, 209, 0.08);
+  color: var(--ha-blue);
+}
+
+[data-theme='dark'] .navbar-sidebar__items .navbar__item:hover {
+  background: rgba(107, 209, 195, 0.08);
+  color: var(--ha-teal);
+}
+
+/* Navbar sidebar brand border */
+.navbar-sidebar__brand {
+  border-bottom: 1px solid rgba(107, 121, 209, 0.12);
+}
+
+[data-theme='dark'] .navbar-sidebar__brand {
+  border-bottom-color: rgba(107, 209, 195, 0.1);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Doc sidebar ─────────────────────────────────────────────── */
+.theme-doc-sidebar-container {
+  border-right: 1px solid rgba(107, 121, 209, 0.1) !important;
+}
+
+/* ── Code blocks ─────────────────────────────────────────────── */
+.prism-code {
+  border-radius: 12px !important;
+}
+
+/* ── Markdown content ────────────────────────────────────────── */
+.markdown blockquote {
+  border-left: 4px solid var(--ha-teal);
+  background: var(--ha-gradient-soft);
+  border-radius: 0 8px 8px 0;
+  padding: 0.8rem 1.2rem;
+}
+

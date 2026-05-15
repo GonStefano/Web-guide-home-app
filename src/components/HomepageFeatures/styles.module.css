@@ -1,0 +1,108 @@
+/* ── Features Section ─────────────────────────────────────────── */
+.features {
+  padding: 4rem 0 5rem;
+  width: 100%;
+}
+
+/* ── Section header ──────────────────────────────────────────── */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  opacity: 0.65;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Feature Cards Grid ──────────────────────────────────────── */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 996px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+/* ── Individual card ─────────────────────────────────────────── */
+.featureCard {
+  padding: 2rem 1.75rem;
+  border-radius: 20px;
+  background: var(--ifm-background-color);
+  border: 1px solid rgba(107, 121, 209, 0.12);
+  box-shadow: var(--ha-shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--ha-shadow-md);
+  border-color: rgba(107, 121, 209, 0.3);
+}
+
+[data-theme='dark'] .featureCard {
+  background: rgba(26, 29, 46, 0.7);
+  border-color: rgba(107, 121, 209, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+[data-theme='dark'] .featureCard:hover {
+  border-color: rgba(107, 209, 195, 0.3);
+}
+
+/* ── Icon ────────────────────────────────────────────────────── */
+.featureIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  font-size: 1.8rem;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  flex-shrink: 0;
+}
+
+/* Fallback for browsers without color-mix */
+@supports not (background: color-mix(in srgb, red 50%, blue)) {
+  .featureIcon {
+    background: rgba(107, 121, 209, 0.12);
+    border: 1px solid rgba(107, 121, 209, 0.25);
+  }
+}
+
+/* ── Card text ───────────────────────────────────────────────── */
+.featureTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  font-family: var(--ifm-heading-font-family);
+  letter-spacing: -0.01em;
+}
+
+.featureDesc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.72;
+}
