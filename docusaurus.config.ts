@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'HomeApp',
   tagline: 'Guía de uso y documentación oficial.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/Logo.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://homeapp-guide.example.com',
+  url: 'https://GonStefano.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Web-guide-home-app/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'stefano', // Usually your GitHub org/user name.
-  projectName: 'homeapp', // Usually your repo name.
+  organizationName: 'GonStefano', // Usuario de GitHub
+  projectName: 'Web-guide-home-app', // Nombre del repo
 
   onBrokenLinks: 'throw',
 
@@ -52,7 +52,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/Logo.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
