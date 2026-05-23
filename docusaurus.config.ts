@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'HomeApp',
   tagline: 'Guía de uso y documentación oficial.',
-  favicon: 'img/Logo.ico',
+  favicon: 'img/Logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
