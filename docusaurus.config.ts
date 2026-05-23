@@ -15,16 +15,16 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://GonStefano.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Web-guide-home-app/',
+  url: 'https://home-app.me',
+  // Con dominio personalizado el baseUrl es simplemente '/'
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'GonStefano', // Usuario de GitHub
   projectName: 'Web-guide-home-app', // Nombre del repo
 
+  trailingSlash: true,
   onBrokenLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
