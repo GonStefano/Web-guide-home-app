@@ -41,7 +41,7 @@ function HomepageHeader() {
           <Link
             id="hero-cta-secondary"
             className={clsx('button button--lg', styles.btnSecondary)}
-            to="/docs/tareas">
+            to="/docs/inicio">
             Ver funcionalidades
           </Link>
         </div>

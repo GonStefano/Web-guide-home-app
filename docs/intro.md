@@ -10,15 +10,14 @@ HomeApp es una aplicación móvil diseñada para ayudarte a gestionar las tareas
 
 ## ¿Qué puedes hacer con HomeApp?
 
-La app tiene **3 pantallas principales** accesibles desde la barra de navegación inferior:
+La app tiene **4 pantallas principales** accesibles desde la barra de navegación inferior:
 
 | Pantalla | ¿Para qué sirve? |
 |:---|:---|
 | 🏠 **Inicio** | Resumen del día: clima actual, precio de la luz ahora mismo, tareas de hoy y una sugerencia inteligente. |
 | 📅 **Agenda** | Calendario con todas tus tareas. Crea, consulta y elimina tareas por fecha. |
 | ⚡ **Smart Home** | Selecciona una tarea del hogar, elige la hora y recibe una puntuación para saber si es buen momento para hacerla. |
-
-Además, tienes acceso a tu **Perfil** donde puedes gestionar tu familia y cambiar tu contraseña.
+| 👤 **Perfil** | Gestiona tu familia, invita miembros y cambia tu contraseña. |
 
 ## Primeros Pasos
 

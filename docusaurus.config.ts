@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -10,9 +10,10 @@ const config: Config = {
   favicon: 'img/Logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
+  // NOTA: v4 desactivado porque rspack tiene un bug con React 19 (panic en jsx-runtime)
+  // future: {
+  //   v4: true,
+  // },
 
   // Set the production url of your site here
   url: 'https://home-app.me',
@@ -60,35 +61,9 @@ const config: Config = {
       title: 'HomeApp',
       logo: {
         alt: 'HomeApp Logo',
-        src: 'img/logo.svg', // Recomendado crear un logo luego
+        src: 'img/logo.svg',
       },
-      items: [
-        {
-          to: '/docs/intro',
-          position: 'left',
-          label: 'Guía de Uso',
-        },
-        {
-          to: '/docs/tareas',
-          position: 'left',
-          label: 'Tareas',
-        },
-        {
-          to: '/docs/hogar',
-          position: 'left',
-          label: 'Energía & Clima',
-        },
-        {
-          to: '/docs/faq',
-          position: 'left',
-          label: 'FAQ',
-        },
-        {
-          href: 'https://github.com/stefano/homeapp',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
+      items: [],
     },
     footer: {
       style: 'dark',
@@ -97,12 +72,28 @@ const config: Config = {
           title: 'Documentación',
           items: [
             {
-               label: 'Introducción',
-               to: '/docs/intro',
+              label: 'Introducción',
+              to: '/docs/intro',
             },
             {
-               label: 'Gestión de Tareas',
-               to: '/docs/tareas',
+              label: 'Inicio',
+              to: '/docs/inicio',
+            },
+            {
+              label: 'Gestión de Tareas',
+              to: '/docs/tareas',
+            },
+            {
+              label: 'Smart Home',
+              to: '/docs/smarthome',
+            },
+            {
+              label: 'Familia',
+              to: '/docs/familia',
+            },
+            {
+              label: 'FAQ',
+              to: '/docs/faq',
             },
           ],
         },
@@ -110,8 +101,8 @@ const config: Config = {
           title: 'Legal',
           items: [
             {
-               label: 'Privacidad',
-               to: '/',
+              label: 'Privacidad',
+              to: '/',
             },
           ],
         },
